@@ -56,7 +56,7 @@
 
 本项目采用模块化 (MVC) 架构设计，逻辑清晰，易于维护。
 
-text
+```text
 SmartVisionSystem/
 │
 ├── core/                      # [核心算法层] 存放 AI 模型与算法逻辑
@@ -91,7 +91,7 @@ SmartVisionSystem/
 └── README.md                  # 项目说明文档
 
 
-
+```
 ---
 
 ## 🚀 快速开始

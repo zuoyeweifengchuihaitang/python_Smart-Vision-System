@@ -1,0 +1,15 @@
+numpy
+opencv-python
+torch
+torchvision
+facenet-pytorch
+ultralytics
+mediapipe
+scipy
+PyQt5
+pandas
+matplotlib
+Pillow
+openpyxl
+pyttsx3
+pywin32

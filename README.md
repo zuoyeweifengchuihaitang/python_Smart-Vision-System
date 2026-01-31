@@ -51,6 +51,44 @@
 - **数据处理**: Pandas, NumPy
 - **其他**: Pyttsx3 (语音合成), Winsound (系统音效)
 
+---
+## 📂 项目结构 (Project Structure)
+
+本项目采用模块化 (MVC) 架构设计，逻辑清晰，易于维护。
+
+text
+SmartVisionSystem/
+│
+├── core/                      # [核心算法层] 存放 AI 模型与算法逻辑
+│   ├── __init__.py
+│   ├── models.py              # 模型初始化 (加载 YOLOv8, MediaPipe, FaceNet)
+│   ├── recognition.py         # 人脸识别核心逻辑 (特征提取、比对)
+│   └── tracking.py            # 物体追踪 (CentroidTracker) 与 流量统计逻辑
+│
+├── database/                  # [数据层] 负责数据持久化
+│   ├── __init__.py
+│   ├── operations.py          # 数据库核心操作 (增删改查、自检、物理同步)
+│   └── logger.py              # 访问日志 (.csv) 的读写与统计分析
+│
+├── ui/                        # [视图层] PyQt5 界面与交互
+│   ├── __init__.py
+│   ├── main_window.py         # 主程序窗口逻辑
+│   ├── worker.py              # [核心控制器] 多线程视觉处理引擎 (QThread)
+│   ├── dialogs.py             # 弹窗组件 (注册窗口、管理窗口)
+│   └── widgets.py             # 自定义 UI 控件 (如点击反馈 Label)
+│
+├── data/                      # [资源目录] (自动生成，无需手动创建)
+│   ├── faces/                 # 存放录入的人脸物理图片 (.jpg)
+│   │   ├── black/             # 黑名单照片
+│   │   └── white/             # 白名单照片
+│   ├── db/                    # 存放特征数据库文件
+│   │   └── face_db.pkl        # 人脸特征向量索引文件
+│   └── access_log.csv         # 访问与报警日志
+│
+├── config.py                  # 全局配置文件 (字体路径、阈值设置等)
+├── main.py                    # [程序入口] 启动文件
+├── requirements.txt           # 项目依赖库列表
+└── README.md                  # 项目说明文档
 
 
 

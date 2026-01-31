@@ -1,4 +1,4 @@
-# 👁️ Smart Vision System (AI 综合管理系统)
+# 👁️ Smart Vision System 
 
 > 一个基于 PyQt5 和深度学习的智能化安防监控与数据分析平台。集成了多模态人脸识别、黑名单预警、行人流量统计及人群密度热力分析功能。
 
